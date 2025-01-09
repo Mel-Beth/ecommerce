@@ -1,5 +1,5 @@
 <?php
-require '../includes/db.php';
+require '../config/db.php';
 
 // Récupérer les commandes
 $query = $pdo->query("SELECT * FROM commandes ORDER BY created_at DESC");

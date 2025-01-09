@@ -1,6 +1,6 @@
 <?php
 require '../lib/fpdf186/fpdf.php';
-require '../includes/db.php';
+require 'config/db.php';
 
 if (isset($_POST['id'])) {
     $commande_id = $_POST['id'];

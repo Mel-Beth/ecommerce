@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'db.php';
+require 'config/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
@@ -16,9 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['role'] = $user['role'];
 
         if ($user['role'] === 'admin') {
-            header('Location: ../backoffice/commandes.php'); // Redirige vers l'admin
+            header('Location: backoffice/commandes.php'); // Redirige vers l'admin
         } else {
-            header('Location: ../index.php'); // Redirige vers l'accueil client
+            header('Location: index.php'); // Redirige vers l'accueil client
         }
     } else {
         echo "Identifiants incorrects.";

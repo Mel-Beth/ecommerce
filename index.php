@@ -1,5 +1,5 @@
 <?php
-require 'includes/db.php';
+require 'config/db.php';
 
 // Charger les articles depuis la base de données
 $query = $pdo->query("SELECT * FROM articles");
